@@ -67,4 +67,11 @@ $(function(){
         $('input[name="notes"]').val(encodeURI(JSON.stringify(editor.getContents())))
     });
 
+    $('.delete').on('click', function(evt){
+        evt.preventDefault();
+        if(confirm('Sicher?')){
+            window.location = $(this).attr('href');
+        }
+    })
+
 })
