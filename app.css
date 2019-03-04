@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-family: Inconsolata, Monaco, 'Andale Mono', Courier;
+    font-size: 18px;
+    color: #212121;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    margin-bottom: 1em;
+}
+p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+p + h3 {
+    margin-top: 3em;
+}
+a {
+    text-decoration: none;
+    background-color: #ebebeb;
+    color: #3883a3;
+    padding: 0 2px;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.2s, color 0.4s;
+    -moz-transition: background-color 0.2s, color 0.4s;
+    -ms-transition: background-color 0.2s, color 0.4s;
+    -o-transition: background-color 0.2s, color 0.4s;
+    transition: background-color 0.2s, color 0.4s;
+}
+a:hover {
+    background-color: #98cede;
+    color: #212121;
+}
+span.code {
+    padding: 0 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+.block {
+    padding: 80px 0;
+    width: 100%;
+}
+.inner {
+    max-width: 960px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+strong {
+    font-weight: 700;
+}
+.bg-gray {
+    background-color: #414141;
+}
+.bg-red {
+    background-color: #ff5a45;
+}
+.bg-red a {
+    color: #ff5a45;
+}
+.bg-red a:hover {
+    background-color: #ffb4ab;
+    color: #212121;
+}
+.bg-blue {
+    background-color: #71bbd2;
+}
+.bg-green {
+    background-color: #97ce7f;
+}
+.bg-yellow {
+    background-color: #ddca9a;
+}
+.center {
+    text-align: center;
+}
+.header {
+    padding: 30px 0;
+}
+.clndr-logo {
+    margin: 0 auto;
+    width: 113px;
+    height: 113px;
+    background-image: url('http://kylestetz.github.io/CLNDR/css/./clndr-logo.svg');
+}
+.banner-text {
+    text-align: center;
+    color: #f4f4f4;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px #212121;
+}
+.banner-text.below {
+    margin-top: 30px;
+}
+.banner-text.below a {
+    background-color: transparent;
+    color: #97ce7f;
+}
+.banner-text.below a:hover {
+    color: #d3eac9;
+}
+.more-space {
+    margin-top: 3em;
+}
+
+.wrapper {
+    max-width: 1280px;
+    padding: 20px;
+    margin: 50px auto 250px;
+}
+.more {
+    width: 100%;
+}
+.reservation {
+    float: left;
+    width: 55%;
+    max-width: 500px;
+}
+.notes {
+    padding-left: 14px;
+    float: right;
+    width: 45%;
+}
+@media all and (max-width: 768px) {
+    .reservation, .notes {
+        width: 100%;
+    }
+}
+
+input[type="text"],
+input[type="submit"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    border: 1px solid #bfbfbf;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    width: 50%;
+    border: 1px solid #bfbfbf;
+    background: #fff;
+    float: right;
+
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+}
+input[type="submit"]:hover {
+    background: #efefef;
+    border-color: #efefef;
+}
+textarea {
+    min-height: 100px;
+}
+.notes-editor {
+    margin-bottom: 20px;
+    min-height: 300px;
+}

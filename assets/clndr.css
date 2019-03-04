@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+.calendar {
+  width: 100%;
+  background-color: #ebebeb;
+  font-weight: 700;
+  -moz-box-shadow: 0px 4px 0 #343434;
+  -webkit-box-shadow: 0px 4px 0 #343434;
+  box-shadow: 0px 4px 0 #343434;
+}
+.calendar .clndr-controls {
+  padding: 14px;
+  background-color: #414141;
+  color: white;
+  text-align: center;
+}
+.calendar .clndr-controls .clndr-previous-button {
+  float: left;
+  text-align: left;
+}
+.calendar .clndr-controls .clndr-next-button {
+  float: right;
+  text-align: right;
+}
+.calendar .clndr-controls .clndr-previous-button,
+.calendar .clndr-controls .clndr-next-button {
+  width: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+}
+.calendar .clndr-controls .clndr-previous-button:hover,
+.calendar .clndr-controls .clndr-next-button:hover {
+  opacity: 0.5;
+}
+.calendar .clndr-grid {
+  float: left;
+  width: 55%;
+  border-right: 2px solid white;
+}
+.calendar .clndr-grid .days-of-the-week {
+  width: 100%;
+  background-color: #3883a3;
+}
+.calendar .clndr-grid .days-of-the-week .header-day {
+  float: left;
+  width: 14.2857%;
+  padding: 14px;
+  text-align: center;
+  color: white;
+}
+.calendar .clndr-grid .days {
+  width: 100%;
+}
+.calendar .clndr-grid .days .day,
+.calendar .clndr-grid .days .empty {
+  float: left;
+  width: 14.2857%;
+  height: 66px;
+  padding: 24px 0;
+  text-align: center;
+  color: #4f4f4f;
+  background-color: #ebebeb;
+  border-bottom: 2px solid white;
+  background-size: cover;
+  background-position: center;
+}
+.calendar .clndr-grid .days .day.event .day-number,
+.calendar .clndr-grid .days .empty.event .day-number {
+  padding-bottom: 4px;
+  font-weight: 100;
+}
+.calendar .clndr-grid .days .day.adjacent-month .day-number,
+.calendar .clndr-grid .days .empty.adjacent-month .day-number {
+  opacity: 0.3;
+}
+.calendar .clndr-grid .days .today {
+  background-color: white;
+  background-image: none;
+}
+.calendar .clndr-grid .days .event {
+  opacity: 0.25;
+}
+.calendar .event-listing {
+  float: left;
+  width: 45%;
+}
+.calendar .event-listing .event-listing-title {
+  padding: 14px;
+  background-color: #71bbd2;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+.calendar .event-listing .event-item {
+  padding: 14px;
+  color: #4f4f4f;
+}
+.calendar .event-listing .event-item-dates {
+  font-style: italic;
+  font-weight: 400;
+}
+.calendar .event-listing .event-item-location {
+  font-weight: 400;
+}
+.noselect {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+}
+
+@media all and (max-width: 768px) {
+  .calendar .clndr-grid {
+    width: 100%;
+    border: none;
+  }
+
+  .calendar .event-listing {
+    width: 100%;
+  }
+}
