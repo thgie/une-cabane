@@ -65,7 +65,7 @@ if (isset($_GET['delete'])) {
 
 <div class="wrapper">
     <h1>Le Grillon</h1>
-    <h2>Aperçu / Übersicht</h2>
+    <h2>Aperçu</h2>
     <div class="calendar">
         <script type="text/template" class="calendar-template">
             <div class="clndr-controls">
@@ -112,25 +112,29 @@ if (isset($_GET['delete'])) {
     <div class="more clearfix">
         <div class="reservation">
             <br><br>
-            <h2>Nouvelle Reservation / Neue Reservation</h2>
+            <h2>Nouvelle Reservation</h2>
             <form action="" method="post">
                 <input type="hidden" name="form" value="reservation">
-                <input type="text" name="name" placeholder="Nom / Name" required>
-                <input type="text" name="dates" placeholder="Données / Daten" required>
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="text" name="dates" placeholder="Dates" required>
                 <input type="hidden" name="from">
                 <input type="hidden" name="to">
-                <textarea name="note" placeholder="Notiz"></textarea>
-                <input type="submit" value="Reservieren">
+                <textarea name="note" placeholder="Note"></textarea>
+                <input type="submit" value="Réservez">
             </form>
         </div>
         <div class="notes">
             <br><br>
-            <h2>Notes / Notizen</h2>
+            <h2>Memos</h2>
             <form action="" method="post">
                 <input type="hidden" name="form" value="notes">
                 <input type="hidden" name="notes" value="<?php echo file_get_contents('notes.txt'); ?>">
                 <div class="notes-editor"></div>
-                <input type="submit" value="Abschicken">
+                <?php if(!$admin): ?>
+                    <div class="notes-display"></div>
+                <?php else: ?>
+                <input type="submit" value="Sauvegarder">
+                <?php endif; ?>
             </form>
         </div>
     </div>
