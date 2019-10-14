@@ -8,7 +8,7 @@ if (isset($_POST['form'])) {
             $_POST['name'],
             $_POST['from'],
             $_POST['to'],
-            $_POST['note']
+            preg_replace("/[\n\r]/", "", nl2br($_POST['note']))
         ]);
         fclose($fp);
     }
@@ -156,6 +156,7 @@ if (isset($_GET['delete'])) {
         if (($handle = fopen("calendar.csv", "r")) !== false) {
 
             while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+
                 echo '{' . PHP_EOL;
                 echo 'uid: "' . $data[0] . '",' . PHP_EOL;
                 echo 'name: "' . $data[1] . '",' . PHP_EOL;
