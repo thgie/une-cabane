@@ -78,7 +78,7 @@ $(function(){
             "format": "DD.MM.YYYY",
             "separator": " - ",
             "applyLabel": "Sélectionnez",
-            "cancelLabel": "Avorter",
+            "cancelLabel": "Supprimer",
             "fromLabel": "De",
             "toLabel": "Jusqu'à",
             "customRangeLabel": "Custom",
